@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Alamofire
 
 class SearchProductsVC: UIViewController {
 
@@ -40,6 +41,19 @@ class SearchProductsVC: UIViewController {
             print("timer", self.elapsedTime)
             Api.getProducts { (products) in
                 print("getProducts", self.elapsedTime)
+                
+                Alamofire.request(Contents.Api.pookyUS, method: .post, headers: nil).responseString {
+                    response in
+                    switch response.result {
+                    case .success:
+                        print(response)
+                        
+                        break
+                    case .failure(let error):
+                        
+                        print(error)
+                    }
+                }
 
                 var matchedProducts = [[String: Any]]()
                 for taskIndex in self.selectedTasks{

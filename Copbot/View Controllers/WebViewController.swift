@@ -9,6 +9,8 @@
 import UIKit
 import WebKit
 import MBProgressHUD
+import Alamofire
+import SwiftyJSON
 
 class WebViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
@@ -297,6 +299,7 @@ class WebViewController: UIViewController {
     
     func nextProduct() {
         hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
         
         let product = products[currentIndexOfProduct]
         let url = product["url"] as! String

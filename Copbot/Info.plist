@@ -33,13 +33,18 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key> 
+		<true/> 
+		<!--Include to specify minimum TLS version--> 
+		<key>NSTemporaryExceptionMinimumTLSVersion</key> 
+		<string>TLSv1.1</string>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>yourdomain.com</key>
+			<key>pooky.dev</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
@@ -48,6 +53,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>LSApplicationCategoryType</key>
+	<dict/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

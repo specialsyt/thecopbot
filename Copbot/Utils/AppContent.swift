@@ -60,6 +60,10 @@ struct Contents {
         static let root = "https://api.thecopbot.com/api/"
         static let authorize = "\(root)/user/auth"
         
+        static let pookyUS = "https://pooky.dev:1337/gen?token=ted-fa09b416-74c2-45fb-9d30-dd00787dc5a5&region=us"
+        
+        static let pookyEU = "https://pooky.dev:1337/gen?token=ted-fa09b416-74c2-45fb-9d30-dd00787dc5a5&region=eu"
+        
         static let copbotRoot = "https://copbot-api-beta.sloppy.zone"
         
         static let drops = "\(copbotRoot)/drops/"

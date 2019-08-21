@@ -2172,7 +2172,7 @@ bellow and start the bot:</string>
                     <navigationItem key="navigationItem" id="YI3-Qr-HAl">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="igA-BD-ZRK">
-                            <rect key="frame" x="187.5" y="22" width="0.0" height="0.0"/>
+                            <rect key="frame" x="188" y="22" width="0.0" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="copbot" translatesAutoresizingMaskIntoConstraints="NO" id="8aE-Bf-aZS">
