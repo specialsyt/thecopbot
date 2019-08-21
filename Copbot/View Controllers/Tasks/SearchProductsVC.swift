@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import Alamofire
+import SwiftyJSON
 
 class SearchProductsVC: UIViewController {
 
@@ -42,12 +43,13 @@ class SearchProductsVC: UIViewController {
             Api.getProducts { (products) in
                 print("getProducts", self.elapsedTime)
                 
-                Alamofire.request(Contents.Api.pookyUS, method: .post, headers: nil).responseString {
+                request(Contents.Api.pookyUS, method: .get, headers: nil).validate().responseJSON {
                     response in
                     switch response.result {
-                    case .success:
-                        print(response)
-                        
+                    case .success(let value):
+                        let json = JSON(value)
+                        let cookie = json["cookie"]
+
                         break
                     case .failure(let error):
                         
